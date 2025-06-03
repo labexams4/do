@@ -1,0 +1,21 @@
+Step-1: First open any browser and Search download Jenkins -> click on first link -> scroll down and click on windows logo -> download will be started.
+Step2: First check java jdk in your system, if java is available check the java version using cmd. otherwise download and install jdk-17.
+Step-3: Download Git Bash 64-bit Standalone Installer, and install git bash in your system. After installation set the git.exe path in your runtime environment.
+Step-4: Now install Jenkins in your system -> click on next and again next -> select run service as a local system -> click on next and click on Test port ->
+        click on next and click on change and set the java jdk path -> click on next and again next and click on install.
+Step-5: After that install Git Bash in your system (no need to change anything just click on next next and next till last).
+Step-6: Now open a browser -> search localhost:8080 
+Step-7: It will open your Jenkins server -> Copy red line location and search it to in your File manager.
+Step-8: It will show open with option just select notepad -> after that copy the password and paste in Jenkins server -> click on continue -> 
+        click on suggested plugin -> it will take some time for installation -> create admin user using given details and click on save and continue -> 
+         after that click on save and finish -> Click on start using jenkins It will show Jenkins Dashboard.
+Step-9: After that click on manage Jenkins -> click on plugin -> click on available plugin -> search maven -> select maven integration ->
+        click on install -> scroll down and check maven integration and and loading plugin is green and success or not ->  After success click on go back to the top page
+Step-10: Now again click on Manage Jenkins -> click on tools -> scroll down and check Git path -> after that scroll down and in a Maven installation section ->
+        click on add maven -> write maven name and click on apply -> click on save.
+Step-11: now click on dashboard -> click on create a job  -> type your buildwar name (i.e. myWar) -> select Maven Project -> click on OK 
+Step-12: Now take a new page ->  login your GitHub -> check second experiment repository like Devops_pipeline -> copy the git link of second experiment.
+Step-13: scroll down and go to Source code management section -> select git -> paste git link   -> scroll down go to build option and type clean install package
+         in goals option -> click on apply -> click on save.
+Step-14: After save the file -> it will show an option in left side build now ->  click on build now -> It will take two to five minute for creating build file.
+Step-15: After building it will show success with green mark -> click on that section -> it will open new section -> click on console output -> scroll down and check status, build success or not.
