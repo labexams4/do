@@ -1,0 +1,24 @@
+Install Jdk-17 and set the java path in System environment
+Download eclipse zipfile and extract the contents the all eclipse file
+Click on File in left corner -> Click on new -> click on Maven Project
+Click Next and Search org.apache.maven.archetypes and select webapp file
+In a group id you can type anything like name and in aartefact id: you can type anything like your roll
+number
+Click Finish
+Type Y and Press enter, You should see a Build Success message
+now open your pom.xml file and add your dependencies
+Update your project once (Right click on Project -> click on Maven -> click on Update Project)
+Now Login yourGitHub Account
+Create a New Repository and Copy your Repository and paste in notepad
+After that Click on your Profile in Right corner -> Click on Setting.
+It will show a new page, scroll down and select the developer setting ->click on personal access token ->select Token(Classic) ->click on Generate new token and select Generate new token(Classic) -write your token name and select repo option and scroll down and click on Generate Token. (Follow the
+given Image)
+After Generating the token copy the token id and paste in aNotePad.
+Now come on your project and right click on yourproject ->Click on Team ->Click on Share Project.
+It will open a Dialog Box forGitHubSetup, select the option Use or create repository in parent folder of project - >Select your Project and Click on Create Repository and click on Finish.
+After that again Right click on yourProject and select the Team -> click on Commit-> and stage your all file -> and Write a comment (i.e. First Commit) and click on Commit and push-> after that it show an
+  error dialog ->click OK ->now again click on Push Head Button
+After that again click on Push Head, it will show a dialog like given image, paste your Repository URL in URL section and type yourGitHub User Id and Password in User, password section -> Click on
+    preview ->Again clickon Preview.
+After that it will again show a user Id and Password option ->just type yourGithub id in user section and paste your Token id in Password section -> click on push ->one more time it will ask user id and password just repeat your last step with user id and token id ->now check your repository on github, your
+   file is uploaded or not
