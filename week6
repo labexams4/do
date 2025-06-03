@@ -1,0 +1,22 @@
+Step1:-Lunch Jenkins and Login(Use AWS or Software)
+Step2:-Lunch Tomcat Server and login(use AWS or Software)
+Open Jenkins do following steps
+Step 3:-Install plugins
+Go to Manage Jenkins→Plugins→Install Plugin select verify Git→Go to Available plugins
+install Maven integration and Deploy to container install.
+Step 4:-set up git path and maven installation in Tools
+Go to manage Jenkins→Tools→In git installation select path(Git bash) if your using Jenkins
+software or AWS leave it →In maven Enter name Maven and default installation→Apply and
+Save.
+Step 5:-Creating New Job for deploy artifact in tomcat test server
+1. Create New Item→ Enter name DeploytoTestServer →select freestyle project→click 
+2. Select git →paste maven project url form Github→Must and should match branches
+3. Go to Environment →Select Add timestamps to the Console Output
+4. Go to Build Setups→Select Invoke top-level Maven targets→Maven Version enter maven →Goals clean install
+5. Go to Post-build Actions→Select Deploy war/ear to a container→WAR/EAR files
+enter **/*.war→select Containers Tomcat 9.x Remote→Add credentials like
+username, password, Id and description.-->Tomcat URL http://localhost:9090
+→Apply and save
+Step 6:- Build war File
+1. Click Build now →Go to Build select console output now you got Successfully
+Finish.
