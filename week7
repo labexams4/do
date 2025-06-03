@@ -1,0 +1,45 @@
+Step1:-Lunch Jenkins and Login(Use AWS or Software)
+Step2:-Lunch Tomcat Server and login(use AWS or Software)
+Open Jenkins do following steps
+Step 3:-Install plugins
+Go to Manage Jenkins→Plugins→Install Plugin select verify Git→Go to Available plugins
+install Maven integration and Deploy to container install.
+Step 4:-set up git path and maven installation in Tools
+Go to manage Jenkins→Tools→In git installation select path(Git bash) if your using Jenkins
+software or AWS leave it →In maven Enter name Maven and default installation→Apply and
+Save.
+Step 5:-Creating New Job for deploy artifact in tomcat test server
+     1. Create New Item→ Enter name DeployPipeline →select pipeline project→click ok
+    2.Copy paste below commands pipeline script
+pipeline{
+ agent any
+ tools{
+ maven 'Maven'
+
+ }
+ stages{
+ stage('clone the repository'){
+ steps{
+ git url: 'https://github.com/devisar/Exp2.5.git'
+ }
+ }
+ stage('Build the code'){
+ steps{
+ bat 'mvn clean install'
+ }
+ }
+ stage('deploy to tomcat'){
+ steps{
+ deploy adapters: [tomcat9(credentialsId: 'Deploy', path: '', url:
+'http://localhost:8080')], contextPath: null, war: '**/*.war'
+ }
+ }
+ }
+}
+Step 6:-deploy to tomcat you want to create pipeline script go to →pipeline
+syntax→Select in sample step deploy: Deploy war/ear to a container →enter war/ear
+files:**/*.war→Select Containers tomcat 9→select credentials tomcat user name and
+password. →Enter Tomcat Url like http://localhost:9090. →Click Generate Pipeline
+Script copy and paste it original pipeline deployment stage.
+Step 7:- Build war File
+2. Click Build now →Go to
