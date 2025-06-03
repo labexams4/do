@@ -1,0 +1,52 @@
+Step-1
+Create 2 ubuntu instances
+1. Server
+2. Controller
+Step-2
+Connect to server1
+Ubuntu machine default comes with python 3
+But we need pytho 2
+Step-3
+Update apt repository
+sudo apt-get update
+Install python2
+sudo apt-get install -y python2.7 python-pip
+Step-4
+Establish password less connection between controller and managing nodes(server1
+and server2)
+sudo passwd ubuntu (give password as ubuntu)
+Step-5
+sudo vim /etc/ssh/sshd_config
+Change password authentication to yes
+Save and quit
+Restart the service
+sudo service ssh restart
+exit
+Step-6
+Same procedure For Controller
+Now connected to controller Update the repository
+sudo apt-get update
+Install python 2
+sudo apt-get install -y python2.7 python-pip
+Generate the keys
+ssh-keygen
+Step-7
+vim .ssh/id_rsa.pub
+Exit
+Step-8
+Connect to server
+vim .ssh/authorized_keys --&gt; paste the above key
+Exit
+
+Step-9
+Connect to controller machine
+ssh -v ubuntu@ server ip address
+Same procedure for server 2 (copy paste the keys)
+exit
+Step-10
+Connect to controller
+Install the ansible
+Sudo apt-get install software-properties-common
+Sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install -y ansible
