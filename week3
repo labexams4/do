@@ -1,0 +1,44 @@
+Step-1
+ Open aws account
+ Select EC2 instance
+ Click on launch instance
+ Select ubuntu OS
+Step-2
+ Select ubuntu free tier as amazon in image
+Step-3
+ Select instance type t2.micro
+Step-4
+Create key pair
+Step-5
+Network add the below rule(all traff,any)
+Goto the .pem file location from there open gitbash (before you need to download and install
+gitbash in your computer)
+Goto aws click on the connect take the ssh id copy and paste in the gitbash
+Step-6
+Now u need to install jenkins
+First u need to update the apt repository
+$ sudo apt update
+Step-7
+Install java
+sudo apt install openjdk-21-jdk -y
+Step-8
+U need to install git and maven and check it
+sudo apt-get install -y git maven
+git --version
+mvn --version
+Step-9
+Open jenkin.io (Download and deploy) in browsedr and select the generic java
+package(.war)
+Copy and paste link addrest
+$wgetlinkaddress
+Start the jenkins services
+$ java -jar jenkins.war
+Step-10
+we access the jenkin take the public ip of dev server
+Copy and paste in the browser add :8080 as port number
+Unlock the jenkins with password which is present in the gitbash
+Select the install suggested pluggins
+You can give all admin
+Click on save and continue
+Click on save and finish
+Your jenkins is ready
