@@ -1,0 +1,34 @@
+Step1:- Download Selenium Grid
+Step2:-Download Chrome Driver
+Step3:-Download Gecko Driver
+Step 4:-Put all drivers one folder
+Step 5:-Run hub use following command and node also separate cmd. In cmd
+change directory where available all drivers
+1. java -jar selenium-server-4.29.0.jar hub
+2. java -jar selenium-server-4.29.0.jar node --detect-drivers true
+Step 6:-Open Eclipse
+   Create maven project goto FileNewMaven Project SelectNextselect
+org.apache.maven.archetypes select webappEnter Group Id:week7
+ArtifactId:selenium Package:warFinish. Enter Y you get Build Success in
+console.
+Open Pom.xml copy paste below code this all I added dependies and
+plugins. Next Right click ProjectMavenUpdate projectok.
+
+
+.Adding Apache tomcat server
+Go to ProjectPropertiesMavenTargeted Runtimesnewselect apache
+tomcat 9nextbrowse apache folder addressfinishclick check box
+apache 9 and applyapply and close.
+
+Adding TestNG in Eclipse.
+Go to helpInstall New SoftwareAddEnter Name:TestNG,
+Location:https://testng.org/testing-eclipse-update-site/Add.
+Select TestNG check boxNextNextI acceptFinish
+Trust SelectedTrust Selected.
+
+Create Folder inside src test inside java.java folder select build path
+current folder.Right click that foldernewothersclassnextgive
+package name and class nameok
+Java file created copy paste below code.change hub address must and
+should.
+Same page right clickrunTestNG Finally its run test passes.
